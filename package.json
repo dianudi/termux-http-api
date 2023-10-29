@@ -1,0 +1,31 @@
+{
+  "name": "termux-api-http",
+  "version": "1.0.0",
+  "description": "Interfacing Termux API over HTTP webserver.",
+  "main": "index.js",
+  "repository": "https://github.com/dianudi/termux-api-http.git",
+  "author": "dianudi",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "NODE_ENV=production node dist/index.js",
+    "dev": "nodemon dist/index.js",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.20",
+    "@types/node": "^20.8.8",
+    "@types/swagger-jsdoc": "^6.0.2",
+    "@types/swagger-ui-express": "^4.1.5",
+    "nodemon": "^3.0.1",
+    "@types/jsonwebtoken": "^9.0.4",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-async-errors": "^3.1.1",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0"
+  }
+}
