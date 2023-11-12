@@ -20,10 +20,12 @@ async function mustLogin(req: Request, res: Response, next: NextFunction) {
       }
       const { password } = JSON.parse(Buffer.from(file).toString());
       if (jwt.verify(req.headers["authorization"].split(" ")[1], password))
-        next();
-      return res.status(401);
+        return next();
+      return res.sendStatus(401);
     }
+    return res.sendStatus(401);
   }
+  return res.sendStatus(404);
 }
 
 export { mustLogin };

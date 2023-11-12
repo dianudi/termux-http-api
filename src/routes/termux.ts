@@ -343,6 +343,10 @@ termux.route("/contacts").get(contacts);
  *             items:
  *               type: object
  *               properties:
+ *                 sim_slot:
+ *                   type: integer
+ *                   description: Sim slot to use
+ *                   example: 0
  *                 to:
  *                   type: string
  *                   description: Number to deliver this sms.
